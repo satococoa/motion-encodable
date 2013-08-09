@@ -25,7 +25,7 @@ Or install it yourself as:
 
 ```
 class Entry
-  include Encodable
+  include Motion::Encodable
   properties :title, :body
 end
 ```
