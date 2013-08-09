@@ -1,5 +1,7 @@
 # motion-encodable
 
+[![Build Status](https://travis-ci.org/satococoa/motion-encodable.png?branch=master)](https://travis-ci.org/satococoa/motion-encodable)
+
 Implement NSCoding protocol methods with ease
 
 ## Installation
