@@ -6,9 +6,9 @@ Gem::Specification.new do |spec|
   spec.version       = VERSION
   spec.authors       = ["Satoshi Ebisawa"]
   spec.email         = ["e.satoshi@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Implement NSCoding protocol methods with ease}
+  spec.summary       = %q{Implement NSCoding protocol methods with ease}
+  spec.homepage      = "https://github.com/satococoa/motion-encodable"
   spec.license       = ""
 
   spec.files         = `git ls-files`.split($/)

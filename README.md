@@ -25,8 +25,24 @@ Or install it yourself as:
 ```
 class Entry
   include Encodable
-  properties :title
+  properties :title, :body
 end
+```
+
+Now, you can serialize and deserialize your object using NSCoding protocol.
+
+```
+entry = Entry.new
+entry.title = 'foo'
+entry.body = 'bar'
+
+# save to NSUserDefaults
+user_defaults = NSUserDefaults.standardUserDefaults
+user_defaults[:entry] = entry.to_data
+
+loaded_entry = Entry.load(user_defaults[:entry])
+loaded_entry.title # => "foo"
+loaded_entry.body # => "bar"
 ```
 
 ## Contributing
