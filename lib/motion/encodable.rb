@@ -25,6 +25,10 @@ class Motion
     def to_data
       NSKeyedArchiver.archivedDataWithRootObject(self)
     end
+    
+    def save_to_file(path)
+      NSKeyedArchiver.archiveRootObject(self, toFile: path)
+    end
 
     # NSCoding protocol
     def initWithCoder(decoder)
