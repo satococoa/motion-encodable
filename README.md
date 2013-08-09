@@ -1,5 +1,6 @@
 # motion-encodable
 
+[![Gem Version](https://badge.fury.io/rb/motion-encodable.png)](http://badge.fury.io/rb/motion-encodable)
 [![Build Status](https://travis-ci.org/satococoa/motion-encodable.png?branch=master)](https://travis-ci.org/satococoa/motion-encodable)
 [![Dependency Status](https://gemnasium.com/satococoa/motion-encodable.png)](https://gemnasium.com/satococoa/motion-encodable)
 [![Code Climate](https://codeclimate.com/github/satococoa/motion-encodable.png)](https://codeclimate.com/github/satococoa/motion-encodable)
