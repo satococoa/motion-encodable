@@ -44,6 +44,15 @@ user_defaults[:entry] = entry.to_data
 loaded_entry = Entry.load(user_defaults[:entry])
 loaded_entry.title # => "foo"
 loaded_entry.body # => "bar"
+
+# save to file
+dir_path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true)[0]
+file_path = dir_path + '/entry.dat'
+entry.save_to_file(file_path)
+
+loaded_entry = Entry.load(NSData.dataWithContentsOfFile(file_path))
+loaded_entry.title.should == @params[:title]
+loaded_entry.body.should == @params[:body]
 ```
 
 ## Contributing
