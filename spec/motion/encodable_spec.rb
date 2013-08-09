@@ -1,8 +1,9 @@
 class Entry
   include Motion::Encodable
-  properties :title
+  properties :title, :body
   def initialize(params={})
     @title = params[:title]
+    @body = params[:body]
   end
 end
 
@@ -39,6 +40,7 @@ describe Motion::Encodable do
       entry_as_data = @entry.to_data
       loaded_entry = Entry.load(entry_as_data)
       loaded_entry.title.should == @params[:title]
+      loaded_entry.body.should == @params[:body]
     end
 
     it 'should be able to save into file' do
@@ -46,6 +48,7 @@ describe Motion::Encodable do
       entry_as_data = NSData.dataWithContentsOfFile(@file_path)
       loaded_entry = Entry.load(entry_as_data)
       loaded_entry.title.should == @params[:title]
+      loaded_entry.body.should == @params[:body]
     end
   end
 end
