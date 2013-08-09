@@ -5,7 +5,7 @@
 [![Dependency Status](https://gemnasium.com/satococoa/motion-encodable.png)](https://gemnasium.com/satococoa/motion-encodable)
 [![Code Climate](https://codeclimate.com/github/satococoa/motion-encodable.png)](https://codeclimate.com/github/satococoa/motion-encodable)
 
-Implement NSCoding protocol methods with ease
+Implement NSCoding protocol methods with ease for RubyMotion.
 
 ## Installation
 

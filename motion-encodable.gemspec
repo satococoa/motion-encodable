@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
   spec.version       = VERSION
   spec.authors       = ["Satoshi Ebisawa"]
   spec.email         = ["e.satoshi@gmail.com"]
-  spec.description   = %q{Implement NSCoding protocol methods with ease}
-  spec.summary       = %q{Implement NSCoding protocol methods with ease}
+  spec.description   = %q{Implement NSCoding protocol methods with ease for RubyMotion.}
+  spec.summary       = %q{Implement NSCoding protocol methods with ease for RubyMotion.}
   spec.homepage      = "https://github.com/satococoa/motion-encodable"
   spec.license       = "MIT"
 
