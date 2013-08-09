@@ -1,6 +1,6 @@
 # motion-encodable
 
-TODO: Write a gem description
+Implement NSCoding protocol methods with ease
 
 ## Installation
 
@@ -18,7 +18,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+class Entry
+  include Encodable
+  properties :title
+end
+```
 
 ## Contributing
 
