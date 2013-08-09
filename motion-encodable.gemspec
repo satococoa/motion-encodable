@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Implement NSCoding protocol methods with ease}
   spec.summary       = %q{Implement NSCoding protocol methods with ease}
   spec.homepage      = "https://github.com/satococoa/motion-encodable"
-  spec.license       = ""
+  spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
