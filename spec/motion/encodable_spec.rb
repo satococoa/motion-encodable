@@ -11,6 +11,7 @@ describe Motion::Encodable do
   before do
     @params = {
         title: 'bar',
+        body: 'baz'
     }
   end
 
@@ -39,16 +40,16 @@ describe Motion::Encodable do
     it 'should be able to load as data' do
       entry_as_data = @entry.to_data
       loaded_entry = Entry.load(entry_as_data)
-      loaded_entry.title.should == @params[:title]
-      loaded_entry.body.should == @params[:body]
+      loaded_entry.instance_variable_get(:'@title').should == @params[:title]
+      loaded_entry.instance_variable_get(:'@body').should == @params[:body]
     end
 
     it 'should be able to save into file' do
       @entry.save_to_file(@file_path)
       entry_as_data = NSData.dataWithContentsOfFile(@file_path)
       loaded_entry = Entry.load(entry_as_data)
-      loaded_entry.title.should == @params[:title]
-      loaded_entry.body.should == @params[:body]
+      loaded_entry.instance_variable_get('@title').should == @params[:title]
+      loaded_entry.instance_variable_get('@body').should == @params[:body]
     end
   end
 end

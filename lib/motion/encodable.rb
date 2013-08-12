@@ -6,10 +6,9 @@ class Motion
 
     module ClassMethods
       def properties(*props)
+        @properties = []
         props.each {|prop|
-          @properties ||= []
           @properties << prop
-          attr_accessor prop
         }
       end
 
@@ -35,14 +34,14 @@ class Motion
       self.init
       properties.each {|prop|
         v = decoder.decodeObjectForKey(prop.to_s)
-        self.send("#{prop}=", v) if v
+        self.instance_variable_set(:"@#{prop}", v) if v
       }
       self
     end
 
     def encodeWithCoder(encoder)
       properties.each {|prop|
-        encoder.encodeObject(self.send(prop), forKey: prop.to_s)
+        encoder.encodeObject(self.instance_variable_get(:"@#{prop}"), forKey: prop.to_s)
       }
     end
     # // NSCoding protocol
